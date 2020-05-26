@@ -1,0 +1,49 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<h1>Medicines</h1>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-12">
+
+<table class="table table-striped">
+<thead class="thead-dark">
+<th scope="col">Mid</th>
+<th scope="col">Medicine</th>
+<th scope="col">Count</th>
+<th scope="col">Brand</th>
+<th scope="col">Delete</th>
+<th scope="col">Edit</th>
+</thead>
+
+{{#rows}}
+<tr>
+<td>{{mid}}</td>
+<td>{{name}}</td>
+<td>{{count}}</td>
+<td>{{brand}}</td>
+<td>
+<form action="/meds/delete/{{mid}}" method="post">
+<button class="btn btn-danger" type="submit">Delete</button>
+</form>
+</td>
+
+<td>
+<a class="btn btn-success" href="/meds/edit/{{mid}}">Edit</a>
+</td>
+</tr>
+{{/rows}}
+
+</table>
+<a class="btn btn-primary" href="/dashboard">Proceed</a>
+</div></div></div>
+</body>
+</html>

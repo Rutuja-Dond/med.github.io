@@ -1,0 +1,15 @@
+<html>
+<head>
+<body>
+<h1>Add Medicines over Here</h1>
+
+<form action="/meds/edit/{{med.mid}}"method="post">
+<input type="text" name="name" value="{{med.name}}" placeholder="medicine name">
+<input type="text" name="count" value="{{med.count}}" placeholder="enter count">
+<input type="text" name="brand" value="{{med.brand}}" placeholder="brand">
+
+<button type="submit">Save</button>
+</form>
+</body>
+</head>
+</html>
